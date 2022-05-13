@@ -396,4 +396,28 @@ html, body {
     color: var(--text-color);
 }
 
+#github_link {
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 25px;
+    height: 25px;
+
+    background-image: url(../images/github.png);
+    background-size: contain;
+    filter: brightness(75%);
+
+    transition: filter ease-in-out .25s;
+
+    cursor: pointer;
+}
+
+#github_link:hover {
+    filter: brightness(100%);
+
+    transition: filter ease-in-out .25s;
+}
+
 /* IF YOU LOOKED YOU'RE A BAD PERSON */
