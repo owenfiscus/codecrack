@@ -1,0 +1,399 @@
+/* LOOKING AT THE SOURCE CODE IS CHEATING YOU CHEATER */
+/* codecracker | styles.css */
+
+/* colors */
+:root {
+    --background-glass-rose: rgba(255, 100, 130, 0.25);
+    --background-glass-rose-dark: rgba(70, 10, 20, 0.50);
+    --background-glass-rose-darker: rgba(30, 5, 10, 0.75);
+    --background-glass-white: rgba(255, 255, 255, 0.25);
+    --dot-glass-white: rgba(255, 255, 255, 0.50);
+    --text-color: #efefef;
+}
+
+/* main */
+html, body {
+    display: grid;
+    grid-template-columns: calc(50% - 225px) 450px calc(50% - 225px);
+    grid-template-rows: auto 100px 100px 450px 100px auto;
+
+    grid-row-gap: 25px;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    color: var(--text-color);
+}
+
+/* disable selecting text */
+.no_selection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+#title {
+    grid-row: 2;
+    grid-column: 2;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    width: 450px;
+    height: 100px;
+
+    margin-bottom: 50px;
+    padding: 0 25px 0 25px;
+    
+    place-self: center;
+
+    font-size: 1.25rem;
+
+    border-radius: 20px;
+
+    background-color: var(--background-glass-rose-dark);
+    backdrop-filter: blur(20px);
+
+    box-shadow: 5px 5px 10px var(--background-glass-rose-darker);
+}
+
+#bubbles {
+    cursor: pointer;
+}
+
+/* hints */
+#hint_wrap {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+
+    width: 210px;
+    height: 210px;
+
+    display: grid;
+    grid-template-rows: auto 20px 20px 20px 20px 20px 20px auto;
+
+    grid-row-gap: 10px;
+
+    border-radius: 20px;
+
+    background-color: var(--background-glass-rose-dark);
+    backdrop-filter: blur(20px);
+
+    box-shadow: 5px 5px 10px var(--background-glass-rose-darker);
+}
+
+.hint_dot {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100%;
+
+    background-color: var(--dot-glass-white);
+    backdrop-filter: blur(20px);
+
+    box-shadow: 5px 5px 10px var(--background-glass-rose-dark);
+}
+
+.hint_dot > .correct_dot_number {
+    font-size: 1rem;
+    color: var(--background-glass-rose-darker);
+}
+
+.hint_dot > .incorrect_dot_number {
+    font-size: 1rem;
+    color: var(--dot-glass-white);
+}
+
+#hint_1 {
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: auto 20px 20px 20px 20px 20px 20px auto;
+    grid-column-gap: 10px;
+}
+
+#hint_2 {
+    grid-row: 3;
+
+    display: grid;
+    grid-template-columns: auto 20px 20px 20px 20px 20px 20px auto;
+    grid-column-gap: 10px;
+}
+
+#hint_3 {
+    grid-row: 4;
+
+    display: grid;
+    grid-template-columns: auto 20px 20px 20px 20px 20px 20px auto;
+    grid-column-gap: 10px;
+}
+
+#hint_4 {
+    grid-row: 5;
+
+    display: grid;
+    grid-template-columns: auto 20px 20px 20px 20px 20px 20px auto;
+    grid-column-gap: 10px;
+}
+
+#hint_5 {
+    grid-row: 6;
+
+    display: grid;
+    grid-template-columns: auto 20px 20px 20px 20px 20px 20px auto;
+    grid-column-gap: 10px;
+}
+
+#hint_6 {
+    grid-row: 7;
+
+    display: grid;
+    grid-template-columns: auto 20px 20px 20px 20px 20px 20px auto;
+    grid-column-gap: 10px;
+}
+
+#dot_1_1 { grid-column: 2; }
+#dot_1_2 { grid-column: 3; }
+#dot_1_3 { grid-column: 4; }
+#dot_1_4 { grid-column: 5; }
+#dot_1_5 { grid-column: 6; }
+#dot_1_6 { grid-column: 7; }
+#dot_2_1 { grid-column: 2; }
+#dot_2_2 { grid-column: 3; }
+#dot_2_3 { grid-column: 4; }
+#dot_2_4 { grid-column: 5; }
+#dot_2_5 { grid-column: 6; }
+#dot_2_6 { grid-column: 7; }
+#dot_3_1 { grid-column: 2; }
+#dot_3_2 { grid-column: 3; }
+#dot_3_3 { grid-column: 4; }
+#dot_3_4 { grid-column: 5; }
+#dot_3_5 { grid-column: 6; }
+#dot_3_6 { grid-column: 7; }
+#dot_4_1 { grid-column: 2; }
+#dot_4_2 { grid-column: 3; }
+#dot_4_3 { grid-column: 4; }
+#dot_4_4 { grid-column: 5; }
+#dot_4_5 { grid-column: 6; }
+#dot_4_6 { grid-column: 7; }
+#dot_5_1 { grid-column: 2; }
+#dot_5_2 { grid-column: 3; }
+#dot_5_3 { grid-column: 4; }
+#dot_5_4 { grid-column: 5; }
+#dot_5_5 { grid-column: 6; }
+#dot_5_6 { grid-column: 7; }
+#dot_6_1 { grid-column: 2; }
+#dot_6_2 { grid-column: 3; }
+#dot_6_3 { grid-column: 4; }
+#dot_6_4 { grid-column: 5; }
+#dot_6_5 { grid-column: 6; }
+#dot_6_6 { grid-column: 7; }
+
+/* game */
+#game_backdrop {
+    grid-column: 2;
+    grid-row: 4/5;
+
+    place-self: center;
+
+    z-index: 0;
+
+    width: 450px;
+    height: 700px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background-color: var(--background-glass-rose-dark);
+    backdrop-filter: blur(20px);
+
+    box-shadow: 5px 5px 10px var(--background-glass-rose-darker);
+}
+
+/* code */
+#code {
+    grid-column: 2;
+    grid-row: 3;
+
+    display: grid;
+    grid-template-columns: auto 50px 50px 50px 50px 50px 50px auto;
+
+    height: 100px;
+    width: 450px;
+
+    font-size: 2rem;
+
+    border-radius: 20px;
+
+    background-color: var(--background-glass-rose);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 5px 5px 10px var(--background-glass-rose-dark);
+}
+
+.code_digit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3rem;
+}
+
+.code_digit > p {
+    margin-top: 17.5px;
+    padding: 0;
+}
+
+#code_1 { grid-column: 2; }
+#code_2 { grid-column: 3; }
+#code_3 { grid-column: 4; }
+#code_4 { grid-column: 5; }
+#code_5 { grid-column: 6; }
+#code_6 { grid-column: 7; }
+
+/* puzzle board */
+#puzzle {
+    grid-column: 2;
+    grid-row: 4;
+
+    display: grid;
+
+    width: 450px;
+    height: 450px;
+
+    margin: 0;
+
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+
+    border-radius: 20px;
+
+    background-color: var(--background-glass-rose);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 5px 5px 10px var(--background-glass-rose-dark);
+}
+
+.puzzle_button {
+    width: 125px;
+    height: 125px;
+
+    margin: 12.5px 0 0 12.5px;
+
+    border: 0;
+    border-radius: 20px;
+
+    background-color: var(--background-glass-white);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 5px 5px 10px var(--background-glass-rose);
+
+    transition: box-shadow ease-in-out .25s;
+
+    font-size: 3rem;
+    color: var(--text-color);
+
+    cursor: pointer;
+}
+
+.puzzle_button:hover {
+    box-shadow: 5px 5px 20px var(--background-glass-rose-dark);
+
+    transition: box-shadow ease-in-out .25s;
+}
+
+#pb_1 { grid-column: 1; grid-row: 1; }
+#pb_2 { grid-column: 2; grid-row: 1; }
+#pb_3 { grid-column: 3; grid-row: 1; }
+#pb_4 { grid-column: 1; grid-row: 2; }
+#pb_5 { grid-column: 2; grid-row: 2; }
+#pb_6 { grid-column: 3; grid-row: 2; }
+#pb_7 { grid-column: 1; grid-row: 3; }
+#pb_8 { grid-column: 2; grid-row: 3; }
+#pb_9 { grid-column: 3; grid-row: 3; }
+
+/* test and reset buttons */
+#bottom_buttons {
+    grid-column: 2;
+    grid-row: 5;
+
+    display: grid;
+    grid-template-columns: 62.5px 100px 125px 100px 62.5px;
+    grid-template-rows: 12.5px 75px 12.5px;
+
+    height: 100px;
+    width: 450px;
+
+    border-radius: 20px;
+
+    background-color: var(--background-glass-rose);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 5px 5px 10px var(--background-glass-rose-dark);
+}
+
+.button {
+    grid-row: 2;
+
+    height: 75px;
+    width: 100px;
+
+    border: 0;
+    border-radius: 20px;
+
+    background-color: var(--background-glass-white);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 5px 5px 10px var(--background-glass-rose);
+
+    transition: box-shadow ease-in-out .25s;
+
+    font-size: 1.5rem;
+    color: var(--text-color);
+
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 5px 5px 20px var(--background-glass-rose-dark);
+
+    transition: box-shadow ease-in-out .25s;
+}
+
+#reset_code {
+    grid-column: 2;
+}
+
+#reset_code > span {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+#test_code {
+    grid-column: 4;
+}
+
+#test_code > span {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+/* IF YOU LOOKED YOU'RE A BAD PERSON */
