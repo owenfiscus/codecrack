@@ -1,0 +1,3 @@
+# codecrack
+
+A terrible game that is basically impossible to beat. Unless...
