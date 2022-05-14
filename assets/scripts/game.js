@@ -185,8 +185,10 @@ $("#bubbles").click(function() {
 function delete_digit() {
     var index = code.length;
 
-    code.length = index - 1;
-    remove_digit_code(index);
+    if (index != 0) {
+        code.length = index - 1;
+        remove_digit_code(index);
+    }
 }
 
 // remove value in dom code element
