@@ -119,6 +119,11 @@ html, body {
     color: var(--background-glass-rose-darker);
 }
 
+.hint_dot > .exists_dot_number {
+    font-size: 1rem;
+    color: var(--dot-glass-white);
+}
+
 .hint_dot > .incorrect_dot_number {
     font-size: 1rem;
     color: var(--dot-glass-white);

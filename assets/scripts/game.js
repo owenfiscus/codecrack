@@ -102,11 +102,14 @@ function check_matches(code) {
 
     for (var i = 1; i <= 6; i++) {
         var dot = `#dot_${guess_count}_${i}`;
+        var current_number = Number(code[i - 1]);
 
-        if (code[i - 1] == generated_code_array[i - 1]) {
-            color_dot(dot, code[i - 1], true);
+        if (current_number == generated_code_array[i - 1]) {
+            color_dot(dot, code[i - 1], 1);
+        } else if (generated_code_array.includes(current_number)) {
+            color_dot(dot, code[i - 1], 2)
         } else {
-            color_dot(dot, code[i - 1], false)
+            color_dot(dot, code[i - 1], 3)
         }
     }
 }
@@ -128,16 +131,22 @@ function check_guess_count(count) {
 }
 
 // color dot
-function color_dot(dot, number, correct) {
+function color_dot(dot, number, state) {
     const DOT_COLORS = {
         "right": "rgba(255, 115, 215, 0.75);",
+        "exists": "rgba(255, 100, 130, 0.25)",
         "wrong": "rgba(0, 0, 0, 0.5);"
     }
 
-    if (correct == true) {
+    if (state == 1) {
         var add_number = `<p class="correct_dot_number">${number}</p>`
 
         $(dot).css("background-color", DOT_COLORS.right);
+        $(dot).html(add_number);
+    } else if (state == 2) {
+        var add_number = `<p class="exists_dot_number">${number}</p>`
+        
+        $(dot).css("background-color", DOT_COLORS.exists);
         $(dot).html(add_number);
     } else {
         var add_number = `<p class="incorrect_dot_number">${number}</p>`
