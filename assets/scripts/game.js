@@ -4,6 +4,9 @@
 // define constants
 const POP_THRESHOLD = 21;
 
+// define variables
+var winner = false;
+
 // define counters
 var guess_count = 0;
 var pop_count = 0;
@@ -66,13 +69,12 @@ function test_code() {
     if (code.length == 6) {
         var cleaned_code = code.toString().replace(/,/g,'');
 
-        check_matches(cleaned_code);
-
         if (cleaned_code == correct_code) {
-            code = [" ", "W", "I", "N", "!", " "]
+            winner = true;
+            code = [" ", "W", "I", "N", `<span class="code_span material-symbols-outlined">refresh</span>`, " "]
             
             for (var i = 1; i <= 6; i++) {
-                var add_value = `<p>${code[i - 1]}</p>`
+                var add_value = `<p class="pointer_cursor" onclick="reload_game()">${code[i - 1]}</p>`
                 var current_element_id = `#code_${i}`;
             
                 $(current_element_id).html(add_value);
@@ -86,6 +88,8 @@ function test_code() {
                 $('.code_digit').fadeIn(0);
             }, 500);
         }
+
+        check_matches(cleaned_code);
     } else {
         $('.code_digit > p').effect("shake", {distance: 2});
     }
@@ -109,7 +113,7 @@ function check_matches(code) {
 
 // check guess count
 function check_guess_count(count) {
-    if (count >= 6) {
+    if (count >= 6 && winner == false) {
         code = [" ", "L", "O", "S", "E", " "]
             
         for (var i = 1; i <= 6; i++) {
@@ -119,7 +123,7 @@ function check_guess_count(count) {
             $(current_element_id).html(add_value);
         }
 
-        location.reload();
+        setTimeout(() => { reload_game(); }, 500);
     }
 }
 
@@ -190,6 +194,11 @@ function remove_digit_code(index) {
     var current_element_id = `#code_${index}`;
 
     $(current_element_id).html('');
+}
+
+// reload game
+function reload_game() {
+    location.reload();
 }
 
 // IF YOU LOOKED YOU'RE A BAD PERSON

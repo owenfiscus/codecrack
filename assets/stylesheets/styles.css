@@ -43,6 +43,9 @@ html, body {
     user-select: none;
   }
 
+/* class for using the pointer style cursor */
+.pointer_cursor { cursor: pointer; }
+
 #title {
     grid-row: 2;
     grid-column: 2;
@@ -260,6 +263,19 @@ html, body {
 .code_digit > p {
     margin-top: 17.5px;
     padding: 0;
+}
+
+.code_span {
+    font-size: 3rem;
+    color: var(--dot-glass-white);
+
+    transition: color ease-in-out .25s;
+}
+
+.code_span:hover {
+    color: var(--text-color);
+
+    transition: color ease-in-out .25s;
 }
 
 #code_1 { grid-column: 2; }
