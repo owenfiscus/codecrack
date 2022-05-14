@@ -203,4 +203,60 @@ function reload_game() {
     location.reload();
 }
 
+// handle keyboard input
+$(function() {
+    $(document).keyup(function(e) {
+        switch (e.which) {
+            // enter | test code
+            case 13:
+                $("#test_code").trigger("click")
+                break;
+            // backspace | delete digit
+            case 8:
+                $("#delete_digit").trigger("click")
+                break;
+            // 1
+            case 49:
+                $("#pb_1").trigger("click")
+                break;
+            // 1
+            case 49:
+                $("#pb_1").trigger("click")
+                break;
+            // 2
+            case 50:
+                $("#pb_2").trigger("click")
+                break;
+            // 3
+            case 51:
+                $("#pb_3").trigger("click")
+                break;
+            // 4
+            case 52:
+                $("#pb_4").trigger("click")
+                break;
+            // 5
+            case 53:
+                $("#pb_5").trigger("click")
+                break;
+            // 6
+            case 54:
+                $("#pb_6").trigger("click")
+                break;
+            // 7
+            case 55:
+                $("#pb_7").trigger("click")
+                break;
+            // 8
+            case 56:
+                $("#pb_8").trigger("click")
+                break;
+            // 9
+            case 57:
+                $("#pb_9").trigger("click")
+                break;
+        }
+    });
+});
+
 // IF YOU LOOKED YOU'RE A BAD PERSON
