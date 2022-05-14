@@ -1,5 +1,5 @@
 // LOOKING AT THE SOURCE CODE IS CHEATING YOU CHEATER
-// codecracker | game.js
+// codecracker | owen fiscus | https://github.com/owenfiscus/codecrack | game.js
 
 // define constants
 const POP_THRESHOLD = 21;
