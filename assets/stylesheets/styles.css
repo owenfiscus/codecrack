@@ -336,8 +336,10 @@ html, body {
     grid-row: 5;
 
     display: grid;
-    grid-template-columns: 62.5px 100px 125px 100px 62.5px;
+    grid-template-columns: auto 100px 100px 100px auto;
     grid-template-rows: 12.5px 75px 12.5px;
+
+    grid-column-gap: 25px;
 
     height: 100px;
     width: 450px;
@@ -383,6 +385,15 @@ html, body {
 }
 
 #reset_code > span {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+#delete_digit {
+    grid-column: 3;
+}
+
+#delete_digit > span {
     font-size: 3rem;
     color: var(--text-color);
 }

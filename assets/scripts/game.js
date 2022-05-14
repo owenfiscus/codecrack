@@ -46,7 +46,7 @@ function add_value(value) {
     }
 }
 
-// show value in code
+// show value in dom code element
 function show_code(index) {
     var add_value = `<p>${code[index - 1]}</p>`
     var current_element_id = `#code_${index}`;
@@ -177,9 +177,19 @@ $("#bubbles").click(function() {
     }
 });
 
-// delete digit
+// delete digit from array
 function delete_digit() {
+    var index = code.length;
 
+    code.length = index - 1;
+    remove_digit_code(index);
+}
+
+// remove value in dom code element
+function remove_digit_code(index) {
+    var current_element_id = `#code_${index}`;
+
+    $(current_element_id).html('');
 }
 
 // IF YOU LOOKED YOU'RE A BAD PERSON
