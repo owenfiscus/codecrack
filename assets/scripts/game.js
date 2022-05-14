@@ -123,6 +123,7 @@ function check_guess_count(count) {
     }
 }
 
+// color dot
 function color_dot(dot, number, correct) {
     const DOT_COLORS = {
         "right": "rgba(255, 115, 215, 0.75);",
@@ -142,7 +143,7 @@ function color_dot(dot, number, correct) {
     }
 }
 
-// cheat functions
+// bubble pop function
 $("#bubbles").click(function() {
     pop_count = pop_count + 1;
 
@@ -175,5 +176,10 @@ $("#bubbles").click(function() {
         pop_count = 0;
     }
 });
+
+// delete digit
+function delete_digit() {
+
+}
 
 // IF YOU LOOKED YOU'RE A BAD PERSON
